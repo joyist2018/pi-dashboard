@@ -1,4 +1,5 @@
 # Pi Dashboard
+Pi 仪表盘 - 物联网IoT设备炫酷的WebUI监控工具
 A WebUI dashboard for IoT devices likes raspberry pi.
 
 Project details: (http://maker.quwj.com/project/10)
