@@ -40,7 +40,7 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'device.php');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Pi 仪表盘 - IoT 设备炫酷的WebUI监控工具</a>
+                <a class="navbar-brand" href="#">Pi 仪表盘 - 物联网IoT 设备炫酷的WebUI监控工具</a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
