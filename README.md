@@ -78,7 +78,9 @@ Markdown 编辑器 https://github.com/DT27/EditorMD.git
 语言包https://github.com/fluxbb/langs
 ==================
 //克隆Pi Dashboard (Pi 仪表盘) IoT 设备监控工具，提供 Web UI 仪表盘面板
-[root@centos-rpi2 10.0.0.8]# git clone https://github.com/spoonysonny/pi-dashboard.git
+[root@centos-rpi2 10.0.0.8]# git clone https://github.com/joyist2018/pi-dashboard.git  （中文版源）
+https://github.com/spoonysonny/pi-dashboard.git （英文版源）
+
 [root@centos-rpi2 10.0.0.8]# chmod -Rf 777 ./*
 
 ==================
@@ -90,3 +92,7 @@ Markdown 编辑器 https://github.com/DT27/EditorMD.git
 //克隆 ImgURL轻便图床源码
 [root@centos-rpi2 10.0.0.8]# git clone https://github.com/helloxz/imgurl.git
 [root@centos-rpi2 10.0.0.8]# chmod -Rf 777 ./*
+
+
+
+
