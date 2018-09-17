@@ -51,7 +51,7 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'device.php');
                         <ul class="dropdown-menu" role="menu">
                             <li><a target="_blank" href="http://maker.quwj.com/project/10">Pi仪表盘 Dashboard</a></li>
                             <li><a target="_blank" href="https://github.com/spoonysonny/pi-dashboard">源码|GitHub Source</a></li>
-                            <li><a target="_blank" href="https://chdong.top/">关于汉化</a></li>
+                            <li><a target="_blank" href="https://github.com/joyist2018/pi-dashboard.git">汉化|GitHub</a></li>
                         </ul>
                     </li>
                 </ul>
