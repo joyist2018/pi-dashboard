@@ -52,6 +52,7 @@ cd /var/www/html
 sudo chown -R www-data pi-dashboard
 
 ========================================
+
 一下是自用克隆源代码，需要的请自助安装。
 
 //克隆可道云
