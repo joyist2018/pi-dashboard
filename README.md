@@ -173,6 +173,14 @@ git clone https://github.com/spoonysonny/pi-dashboard.git （英文版源）
 
 [root@centos-rpi2]# chmod -Rf 777 ./*
 
+==================
+
+//克隆 孟坤在线音乐播放器MKOnlineMusicPlayer源码
+
+[root@centos-rpi2]# git clone https://github.com/mengkunsoft/MKOnlineMusicPlayer.git
+
+[root@centos-rpi2]# chmod -Rf 777 ./*
+
 
 
 
