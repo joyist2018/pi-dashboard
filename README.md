@@ -57,58 +57,97 @@ sudo chown -R www-data pi-dashboard
 [root@centos-rpi2]# chmod -Rf 777 ./KODExplorer/*
 
 ==================
+
 //克隆DzzOffice开源办公套件
+
 [root@centos-rpi2]# git clone https://github.com/zyx0814/dzzoffice.git
+
 [root@centos-rpi2]# chmod -Rf 777 ./*
 
 ==================
+
 //克隆XiunoBBS -轻论坛 
-[root@centos-rpi2]# git clone https://gitee.com/xiuno/xiunobbs.git        
+
+[root@centos-rpi2]# git clone https://gitee.com/xiuno/xiunobbs.git  
+
 [root@centos-rpi2]# chmod -Rf 777 ./xiunobbs/*
 
 ==================
+
 //克隆Typecho博客平台
+
 [root@centos-rpi2]# git clone https://github.com/typecho/typecho.git
+
 [root@centos-rpi2]# chmod -Rf 777 ./typecho/*
 
 主题 ：
+
 大前端 https://git.coding.net/Arco-X/DUX-for-Typecho.git
+
 大姐姐 https://git.coding.net/Arco-X/H-Code.git
+
 小清新https://github.com/chakhsu/pinghsu.git
 
+
 插件：
+
 标签自动生成 https://github.com/DT27/AutoTags.git
+
 Markdown 编辑器 https://github.com/DT27/EditorMD.git
 
-==================
-//爱特PHP网站文件管理专家
-[root@centos-rpi2]# wget https://aite.me/fileadmin.zip
-[root@centos-rpi2]# unzip fileadmin.zip
-[root@centos-rpi2]# chmod -Rf 777 ./*
 
 ==================
-//克隆FluxBB -轻论坛 
-[root@centos-rpi2]# git clone https://github.com/fluxbb/fluxbb.git
+
+//爱特PHP网站文件管理专家
+
+[root@centos-rpi2]# wget https://aite.me/fileadmin.zip
+
+[root@centos-rpi2]# unzip fileadmin.zip
+
 [root@centos-rpi2]# chmod -Rf 777 ./*
+
+
+==================
+
+//克隆FluxBB -轻论坛 
+
+[root@centos-rpi2]# git clone https://github.com/fluxbb/fluxbb.git
+
+[root@centos-rpi2]# chmod -Rf 777 ./*
+
 
 语言包https://github.com/fluxbb/langs
 
+
 ==================
+
 //克隆Pi Dashboard (Pi 仪表盘) IoT 设备监控工具，提供 Web UI 仪表盘面板
+
 [root@centos-rpi2]# git clone https://github.com/joyist2018/pi-dashboard.git  （中文版源）
+
 git clone https://github.com/spoonysonny/pi-dashboard.git （英文版源）
 
+
 [root@centos-rpi2]# chmod -Rf 777 ./*
 
+
 ==================
+
 //克隆HTML5 Speedtest 网站测速
+
 [root@centos-rpi2]# git clone https://github.com/adolfintel/speedtest.git
+
 [root@centos-rpi2]# chmod -Rf 777 ./*
 
+
 ==================
+
 //克隆 ImgURL轻便图床源码
+
 [root@centos-rpi2]# git clone https://github.com/helloxz/imgurl.git
+
 [root@centos-rpi2]# chmod -Rf 777 ./*
+
 
 
 
