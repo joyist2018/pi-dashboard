@@ -4,7 +4,7 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'device.php');
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Pi 仪表盘 - IoT 设备炫酷的WebUI监控工具</title>
+    <title>Pi 仪表盘 - 物联网IoT 设备炫酷的WebUI监控工具</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
