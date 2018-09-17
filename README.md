@@ -57,6 +57,7 @@ sudo chown -R www-data pi-dashboard
 
 //克隆可道云
 [root@centos-rpi2]# git clone https://github.com/kalcaddle/KODExplorer.git
+
 [root@centos-rpi2]# chmod -Rf 777 ./KODExplorer/*
 
 ==================
