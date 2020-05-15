@@ -1,18 +1,21 @@
 <?php
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'device.php');
 ?>
+<?php $IP = $_SERVER['SERVER_ADDR'];?>
+<?php $URL = $_SERVER['HTTP_HOST'];?>
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Pi 仪表盘 - 物联网IoT 设备炫酷的WebUI监控工具</title>
+    <title>Pi 仪表盘 - IoT 设备炫酷的WebUI监控工具</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <!--script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-more.js"></script>
     <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script-->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script-->	
     <link href="assets/bootstrap.min.css" rel="stylesheet">
     <script src="assets/jquery-3.1.1.min.js"></script>
     <script src="assets/highcharts.js"></script>
@@ -40,18 +43,18 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'device.php');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Pi 仪表盘 - 物联网IoT 设备炫酷的WebUI监控工具</a>
+                <a class="navbar-brand" href="#"><img style="height: 100%; display: inline; margin-right: 10px;" src="assets/logo.png">>Pi 仪表盘 - IoT 设备炫酷的WebUI监控工具</a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a target="_blank" href="http://10.0.0.10/">NAS云端仓库</a></li>
+					<li></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">关于 <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a target="_blank" href="http://maker.quwj.com/project/10">Pi仪表盘 Dashboard</a></li>
-                            <li><a target="_blank" href="https://github.com/spoonysonny/pi-dashboard">源码|GitHub Source</a></li>
-                            <li><a target="_blank" href="https://github.com/joyist2018/pi-dashboard.git">汉化|GitHub</a></li>
+                            <li><a target="_blank" href="https://make.quwj.com/project/10">Pi Dashboard</a></li>
+                            <li><a target="_blank" href="https://github.com/spoonysonny/pi-dashboard">GitHub Source</a></li>
+							<li><a target="_blank" href="https://github.com/joyist2018/pi-dashboard.git">简体中文|GitHub</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -64,7 +67,10 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'device.php');
             <div class="col-md-3">
                 <div style="text-align: center; padding: 20px 0;"><img src="assets/devices/<?php echo($D['model']['id']) ?>.png" /></div>
                 <div style="background-color: #E0E0E0; padding: 5px; border-radius: 3px;">
-                    <div class="text-center" style="margin:20px; padding: 10px 0 10px 0; background-color:#CEFCA3; border-radius: 3px;"><div class="label">IP地址</div><div id="hostip" style="font-size: 150%; font-weight: bolder;"><?php echo($D['hostip']); ?></div></div>
+                    <div class="text-center" style="margin:10px; padding: 10px 0 10px 0; border-radius: 3px;"><div id="pimodel" style="font-size: 90%; font-weight: bolder; text-shadow: 0 1px 0 #fff;"><?php echo($D['model']['pimodel']); ?></div></div>
+					
+					<div class="text-center" style="margin:12px; padding: 10px 0 10px 0; background-color:#CEFCA3; border-radius: 3px;"><div class="label">本机域名<br>Domain</div><div style="font-size: 100%; font-weight: bolder;"><a href="http://<?php echo $URL;?>" target="_blank">http://<?php echo $URL;?>/</a></div></div>
+                    <div class="text-center" style="margin:20px; padding: 10px 0 10px 0; background-color:#CEFCA3; border-radius: 3px;"><div class="label">网络地址<br>IP</div><div id="hostip" style="font-size: 150%; font-weight: bolder;"><?php echo($D['hostip']); ?></div></div>
                     <div class="text-center" style="margin:20px; padding: 10px 0 10px 0; background-color:#9DCFFB; border-radius: 3px;"><div class="label">当前时间<br>TIME</div><div id="time" style="font-size: 150%; font-weight: bolder;">00:00</div><div id="date">-</div></div>
                     <div class="text-center" style="margin:20px; padding: 10px 0 10px 0; background-color:#FFFECD; border-radius: 3px;"><div class="label">已不间断运行<br>UPTIME</div><div id="uptime" style="font-size: 120%; font-weight: bolder;">0</div></div>
                     <div class="text-center" style="margin:20px; padding: 10px 0 10px 0; background-color:#FAFAFA; border-radius: 3px;"><div class="label">操作用户<br>USER</div><div id="user" style="font-size: 120%; font-weight: bolder;"><?php echo($D['user']); ?></div></div>
@@ -111,7 +117,7 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'device.php');
                                     <div class="text-center" style="padding: 10px 0 10px 0; background-color:#9BCEFD;"><span id="cpu-stat-sirq">0</span>%<br /><small class="label">软中断<br>SIRQ</small></div>
                                 </div>
                                 <div class="col-md-12" style="min-height: 52px;">
-                                    <div class="text-center" style="padding: 10px 0 10px 0; margin: auto 0;"><span id="cpu-model" class="label"><small class="label">CPU架构</small><br><?php echo($D['cpu']['model']) ?></span>&nbsp;</div>
+                                    <div class="text-center" style="padding: 10px 0 10px 0; margin: auto 0;"><span id="cpu-model" class="label">CPU架构<?php echo($D['cpu']['model']) ?></span>&nbsp;</div>
                                 </div>
                             </div>
                         </div>
@@ -170,7 +176,7 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'device.php');
                                     <div class="text-center" style="padding: 10px 0 10px 0;"><span id="mem-real-percent">0</span>%<br /><small class="label">已用<br>USED</small></div>
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-6" style="padding: 0; background-color:#CDFD9F;">
-                                    <div class="text-center" style="padding: 10px 0 10px 0;"><span id="mem-real-free">0</span>MB<br /><small class="label"><br>可用<br>FREE</small></div>
+                                    <div class="text-center" style="padding: 10px 0 10px 0;"><span id="mem-real-free">0</span>MB<br /><small class="label">可用<br>FREE</small></div>
                                 </div>
                             </div>
                         </div>
@@ -218,9 +224,9 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'device.php');
                                 </div>
                                 <div class="col-md-2 col-sm-2 col-xs-2" style="padding: 0;">
                                     <div style="height: 80px; margin-top: 10px;">
-                                        <div class="text-center" style="padding: 2px 0 2px 0; background-color: #CCCCCC;"><strong><span id="net-interface-<?php echo($i+1) ?>-name"><?php echo($D['net']['interfaces'][$i]['name']) ?> 网络接口</span></strong></div>
-                                        <div class="text-center" style="padding: 10px 0 10px 0; background-color: #9BCEFD;"><span id="net-interface-<?php echo($i+1) ?>-total-in"><?php echo($D['net']['interfaces'][$i]['total_in']) ?> </span><br /><small class="label">接收|IN</small></div>
-                                        <div class="text-center" style="padding: 10px 0 10px 0; background-color: #CDFD9F;"><span id="net-interface-<?php echo($i+1) ?>-total-out"><?php echo($D['net']['interfaces'][$i]['total_out']) ?> </span><br /><small class="label">发送|OUT</small></div>
+                                        <div class="text-center" style="padding: 2px 0 2px 0; background-color: #CCCCCC;"><strong><span id="net-interface-<?php echo($i+1) ?>-name"><?php echo($D['net']['interfaces'][$i]['name']) ?>网络接口</span></strong></div>
+                                        <div class="text-center" style="padding: 10px 0 10px 0; background-color: #9BCEFD;"><span id="net-interface-<?php echo($i+1) ?>-total-in"><?php echo($D['net']['interfaces'][$i]['total_in']) ?></span><br /><small class="label">接收|IN</small></div>
+                                        <div class="text-center" style="padding: 10px 0 10px 0; background-color: #CDFD9F;"><span id="net-interface-<?php echo($i+1) ?>-total-out"><?php echo($D['net']['interfaces'][$i]['total_out']) ?></span><br /><small class="label">发送|OUT</small></div>
                                     </div>
                                 </div>
                             </div>
@@ -240,7 +246,7 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'device.php');
             <div class="col-md-12">
                 <div id="footer">
                     <hr style="margin: 20px 0 10px 0;" />
-                    <p class="pull-left" style="font-size: 12px;">Powered by <a target="_blank" href="https://github.com/joyist2018/pi-dashboard/"><strong>Pi Dashboard</strong></a> v<?php echo($D['version']) ?>, <a target="_blank" href="http://av98.byethost10.com/">chdong.top</a> all rights reserved.
+                    <p style="text-align: center; font-size: 12px;">Powered by <a target="_blank" href="https://github.com/joyist2018/pi-dashboard/"><strong>Pi Dashboard</strong></a> v<?php echo($D['version']) ?>, <a target="_blank" href="http://av98.byethost10.com/index.php">Forum</a> &nbsp; <a target="_blank" href="http://bt123.byethost15.com/index.php">blog.775885995.xyz</a> all rights reserved.
                     </p>
                 </div>
             </div>
